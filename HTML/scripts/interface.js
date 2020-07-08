@@ -15,26 +15,26 @@ function handleClick(event) {
   let square = event.target;
   let position = square.id;
 
-  handleMove(position);
-  updateSquares();
+
+  if (handleMove(position)) {
+
+    setTimeout(() => {
+      alert(" Game Over ");
+
+    }, 10);
+
+  };
+
+
+  updateSquares(position)
 
 }
 
-function updateSquares() {
+function updateSquares(position) {
 
-  let squares = document.querySelectorAll(".square");
+  let square = document.getElementById(position.toString());
+  let symbol = board[position];
+  square.innerHTML = `<div class = '${symbol}'></div> `
 
-  squares.forEach((square) => {
-    let position = square.id;
-    let symbol = board [position];
-
-    if (symbol != '') {
-      square.innerHTML = `<div class = '${symbol}'></div> `
-    }
-
-
-    })
-
-    
-  }
+}
 

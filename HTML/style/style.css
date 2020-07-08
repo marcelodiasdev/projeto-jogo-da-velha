@@ -1,11 +1,26 @@
 @import url(https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Gabriela&display=swap);
+
+
 
 body{
     text-align: center;
+    background-color: wheat;
 }
 
 h1 {
   font-family: 'Fredoka One', display;
+  font-size: 50px;
+}
+
+h2 {
+  font-family: 'Gabriela', serif;
+  font-size:  45px;
+}
+
+.stage {
+    background-color: rgb(43, 170, 255);
+    border-radius: 050px;
 }
 
 .square{
@@ -16,12 +31,12 @@ h1 {
     display: inline-block;
 }
 
-.o{
+.jogador1{
     position: relative;
 
 }
 
-.o:after{
+.jogador1:after{
     content: "\274C";
     font-size: 50px;
     line-height: 100px;
@@ -33,12 +48,12 @@ h1 {
 }
 
 
-.x{
+.jogador2{
     position: relative;
 
 }
 
-.x:after{
+.jogador2:after{
     content: "\2B55";
     font-size: 50px;
     line-height: 100px;
